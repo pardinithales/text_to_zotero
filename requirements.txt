@@ -1,0 +1,5 @@
+pyzotero>=1.5.18
+openai>=1.0.0
+firecrawl-py>=1.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0

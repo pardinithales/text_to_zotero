@@ -1,0 +1,29 @@
+# Arquivo específico de credenciais do Zotero
+/zotero_credentials.json
+
+# Arquivo de variáveis de ambiente
+.env
+.env.local
+.env.*.local
+
+# Ambiente virtual
+venv/
+env/
+.env/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribuição / empacotamento
+dist/
+build/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log 
