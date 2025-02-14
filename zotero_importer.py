@@ -18,11 +18,11 @@ class ZoteroImporter:
             self.window.title("Importador de Referências para Zotero")
             self.window.geometry("800x700")
             
-            # Inicializar variáveis com valores do .env
-            self.library_id = tk.StringVar(value=os.getenv('ZOTERO_LIBRARY_ID', ''))
-            self.api_key = tk.StringVar(value=os.getenv('ZOTERO_API_KEY', ''))
-            self.openai_key = tk.StringVar(value=os.getenv('OPENAI_API_KEY', ''))
-            self.firecrawl_key = tk.StringVar(value=os.getenv('FIRECRAWL_API_KEY', ''))
+            # Inicializar variáveis
+            self.library_id = tk.StringVar()
+            self.api_key = tk.StringVar()
+            self.openai_key = tk.StringVar()
+            self.firecrawl_key = tk.StringVar()
             
             self.setup_ui()
             
@@ -423,7 +423,7 @@ class ZoteroImporter:
 
         try:
             response = client.chat.completions.create(
-                model="o1",
+                model="gpt-4o",
                 messages=[{"role": "user", "content": merge_prompt}]
             )
             merged_data = json.loads(response.choices[0].message.content)

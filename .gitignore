@@ -1,6 +1,9 @@
 # Arquivo específico de credenciais do Zotero
 /zotero_credentials.json
 
+# Arquivo de backup
+zotero_importer BACKUP.py
+
 # Arquivo de variáveis de ambiente
 .env
 .env.local
